@@ -1,0 +1,67 @@
+Features of Java?: Compiled and Interpreted, Object Oriented, Simple and easy to understand, Platform Independent, Multi-threaded, Robust and secured, Distributed
+What do you mean by Constructor?: Constructors are definition blocks in java which is used to initialize non-static variables.
+									Constructor:
+										1.	Used to create an object.
+										2.	Used to initialize non-static variables.
+What is Local Variable and Instance Variable?: 	Local variable: Variable which is declared within a method or block. Before utilize local variable it should be initialized.
+												Instance Variable: An instance variable is declared inside a class but outside any method. It belongs to the object (instance) of the class.								
+What is Class and Object?:	Class: Class is a blue print or a template to create an object
+							Object: Object is instance of class. It is real time entity
+What is inheritance with example?: Inheriting the members of parent class to child class except private members is called inheritance”.
+						Example: class A{
+	private int k=123;
+	int i=100;
+	static int j=200;
+	void print(){
+		System.out.println("Print method");
+	}
+	static void display(){
+		System.out.println("Display method");
+	}
+}
+class B extends A{
+public static void main(String args[]){
+		System.out.println(A.j);
+		A.display();
+		System.out.println(B.j);	//possible
+		B.display();			//possible
+		A a1 = new A();
+		System.out.println(a1.i);
+		a1.print();
+		B b1 = new B();
+		System.out.println(b1.i);
+		b1.print();
+						//System.out.println(a1.k);
+		//System.out.println(b1.k);
+	}
+}
+
+•	What is encapsulation with example?: Encapsulation is the packing of data and function into a single component and hiding the internal implementation
+It is a achieved by hiding the data by making the variables private and showing the functionality through getter and setter methods.
+By providing only setter or getter method, you can make the class read-only or write-only.
+Example
+class Encapsulation{
+	private int i;
+	private String str;
+	
+	void set(int a, String stmt){		//setter method
+		i=a;
+		str=stmt;
+	}
+	int get_i(){			//getter method
+		return i;
+	}
+	String get_str(){		//getter method
+		return str;
+	}
+}
+public class Demo1 {
+	public static void main(String[] args) {
+		Encapsulation e = new Encapsulation();
+		e.set(11,"Java");
+		System.out.println("The value of i is "+e.get_i());
+		System.out.println("The value of str is "+e.get_str());
+	}
+}
+
+						

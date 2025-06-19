@@ -15,16 +15,16 @@ public class FileHandling {
 	}
 
 	static void FileWriting() throws IOException {
-		File f = new File("E:\\Agile Workspace\\Filehandlefiles\\Test.txt");
+		File f = new File("E:\\StarAgileJava\\Java_Parctice\\Filehandlefiles\\Test.txt");
 		FileWriter fw = new FileWriter(f);
 		BufferedWriter writer = new BufferedWriter(fw);
 
 		writer.write("This is my code");
 		writer.close();
 	}
-	
+
 	static void FileReading() throws IOException {
-		File f = new File("E:\\Agile Workspace\\Filehandlefiles\\Test.txt");
+		File f = new File("E:\\StarAgileJava\\Java_Parctice\\Filehandlefiles\\Test.txt");
 		FileReader fr = new FileReader(f);
 		BufferedReader reader = new BufferedReader(fr);
 
